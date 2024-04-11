@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet"href="style.css"> 
+    
+</head>
+    <body>
+        <nav>
+            <img src="logo.png" width="200" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About me</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+    
+            </ul>
+        </nav>
+
+
+        <div id="experience">
+            <div class="container">
+                <div class="row">
+                    
+                        <div class="about-col-2">
+                            <img src="aaryan7.png">
+                        </div>
+
+                    <div class="about-col-1">
+                                <div class="tab-titles">
+                                     <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                                     <p class="tab-links" onclick="opentab('internship')">Intership</p>
+                                     
+                                </div>
+                                <div class="tab-contents active-tab" id="education">
+                                     <table border="1" cellspacing="0" width="700" height="400">
+                                        <tr aligh="center" valign="middle">
+                                            <th> Year</th>
+                                            <th> Institution</th>
+                                            <th> Grade/Level</th>
+                                        </tr>
+                                        <tr align="center" valign="middle">
+                                            <td> 2008 A.D-2021 A.D</td>
+                                            <td> Rosebud School</td>
+                                            <td> Pre-school to Grade 10</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td> 2021 A.D-2023 A.D </td>
+                                            <td> Uniglobe College</td>
+                                            <td> +2(Sci)</td>
+                                        </tr>
+                                        <tr align="center">
+                                            <td> 2023 A.D-present</td>
+                                            <td> The British College</td>
+                                            <td> Bsc(Honors)Computer Science </td>
+                                        </tr>
+                                     </table>
+                                  </div> 
+                                        <div class="tab-contents"id="internship">
+                                            <ul>
+                                              <li><span>None</span><br>N/A</li>
+                                                </ul>
+                                            </div>
+                                          
+                          </div>
+                     </div>                   
+                </div>         
+            </div>                  
+        </div>  
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            } 
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script> 
+</body>
+</html>
